@@ -3,7 +3,7 @@ import { Injectable } from '@angular/core';
 import { Profile } from '../model/Profile';
 
 // const URL = 'http://localhost:3000/';
-const URL = 'https://rsnotifybackend.herokuapp.com/';
+const URL = 'https://runescapenotifier-backend.herokuapp.com/';
 
 @Injectable({
   providedIn: 'root'
