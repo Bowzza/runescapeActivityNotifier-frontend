@@ -1,0 +1,28 @@
+<div class="main">
+  <div class="title">
+    <p class="text animation">Runescape activity notifier.</p>
+  </div>
+  <form class="main-container" (submit)="activateNotify()" ngNativeValidate>
+    <input type="text" [(ngModel)]="username" name="username" placeholder="Username..." required>
+    <button class="btn" type="submit">Notify Me!<span *ngIf="loading" class="loader"></span></button>
+  </form>
+
+  <div class="imgs">
+    <img id="firstImg" src="../assets/rsmetrics.PNG" alt="rsmetrics" width="390" height="300">
+    <img id="secondImg" src="../assets/rsmetrics2.PNG" alt="rsmetrics" width="390" height="300">
+  </div>
+  
+  <div class="table">
+    <h2>Recent activities</h2>
+    <table id="profiles">
+      <tr>
+        <th>Name</th>
+        <th>Timestamp</th>
+      </tr>
+      <tr *ngFor="let profile of profiles">
+        <td><a href="https://apps.runescape.com/runemetrics/app/overview/player/{{profile.username}}" target="_blank">{{profile.username}}</a></td>
+        <td><a href="https://apps.runescape.com/runemetrics/app/overview/player/{{profile.username}}" target="_blank">{{profile.timestamp}}</a></td>
+      </tr>
+    </table>
+  </div>
+</div>

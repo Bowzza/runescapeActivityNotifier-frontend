@@ -1,0 +1,45 @@
+.btn {
+    padding: 8px 16px;
+    border: none;
+    outline: none;
+    transition: .3s;
+    background-color: #57C557;
+}
+
+.btn:hover {
+    cursor: pointer;
+    background-color: lightgray;
+    transform: scale(1.05);
+}
+
+.top-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #fff;
+}
+
+.bottom-section {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    color: #fff;
+}
+
+img {
+    transform: scale(0);
+    animation: imgAnimation .8s forwards;
+    animation-delay: .05s;
+}
+
+
+@keyframes imgAnimation {
+    from {
+        opacity: 0;
+        transform: scale(0);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}

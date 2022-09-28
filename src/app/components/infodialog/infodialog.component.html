@@ -1,0 +1,9 @@
+<div class="top-section">
+    <img *ngIf="data.success" src="../../../assets/success.png" alt="success" width="75">
+    <img *ngIf="!data.success" src="../../../assets/error.png" alt="success" width="75">
+    <p *ngIf="data.success">You will get notified if {{data.text}} did some activities in the game.</p>
+    <p *ngIf="!data.success">{{data.text}}</p>
+</div>
+<div class="bottom-section">
+<button class="btn" (click)="onNoClick()">Close</button>
+</div>

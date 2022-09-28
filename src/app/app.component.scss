@@ -1,0 +1,320 @@
+.main {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.title { 
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    color: rgb(244, 203, 69);
+    opacity: 0;
+    animation: fadeIn 3s forwards;
+}
+
+.main-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    opacity: 0;
+    animation: fadeIn 2s forwards;
+    animation-delay: .5s;
+}
+
+a {
+    text-decoration: none;
+    width: 100%;
+    color: #fff;
+}
+
+a:hover {
+    color: #000;
+}
+
+input[type=text] {
+    outline: none;
+}
+
+h2 {
+    color: rgb(244, 203, 69);
+    font-weight: normal;
+    text-align: center;
+}
+
+.btn {
+    border: none;
+    padding: 15px 35px;
+    background-color: rgb(87, 198, 87);
+    border-radius: 10px;
+    transition: .3s;
+    font-size: 25px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.btn:hover {
+    cursor: pointer;
+    animation: none;
+    animation: vibrate 100ms;
+    animation-iteration-count: 5;
+}
+
+
+
+.imgs {
+    margin-top: 50px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    position: relative;
+}
+
+#firstImg {
+    position: relative;
+    animation: leftSlide 1s, fadeIn 2s;
+}
+
+#secondImg {
+    position: relative;
+    animation: rightSlide 1s, fadeIn 2s;
+}
+
+.imgs img {
+    transition: .3s;
+}
+
+.imgs img:hover {
+    cursor: pointer;
+    transform: scale(1.05);
+}
+
+input {
+    padding: 10px;
+    font-size: 25px;
+    transition: .3s;
+}
+
+.text{
+    border-right: 4px solid rgb(244, 203, 69);
+    font-size: 300%;
+    white-space: nowrap;
+    overflow: hidden;
+    transition: .3s;
+}
+
+.animation{
+    animation: typewriter 3s steps(50) 1s both,
+                blinkCursor 800ms steps(50) infinite, both;
+}
+
+.loader {
+    width: 27px;
+    height: 27px;
+    border: 5px solid #FFF;
+    border-bottom-color: transparent;
+    border-radius: 50%;
+    display: inline-block;
+    box-sizing: border-box;
+    animation: rotation 1s linear infinite;
+}
+
+.table {
+    width: 50%;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    opacity: 0;
+    animation: fadeIn 3s forwards;
+    // animation-delay: .8s;
+}
+
+#profiles {
+    font-family: Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+  
+#profiles td, #profiles th {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+  
+#profiles tr{
+    // background-color: #f2f2f2;
+    background-color: #051A25;
+    color: #fff;
+}
+
+tr:hover a {
+    color: #000;
+}
+  
+#profiles tr:hover {
+    cursor: pointer;
+    background-color: #ddd;
+    color: #000;
+
+}
+  
+#profiles th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    // background-color: #051A25;
+    background-color: #02131A;
+    color: white;
+}
+
+@keyframes vibrate {
+    from {
+        transform: rotate(7deg);
+    }
+    to {
+        transform: rotate(0deg);
+    }
+}
+
+@keyframes rotation {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+} 
+
+  
+@keyframes typewriter {
+    from {
+        width: 0;
+    }
+    to {
+        width: 670px;
+    }
+}
+  
+@keyframes blinkCursor{
+    from {
+        border-right-color:  rgb(244, 203, 69);
+    }
+    to {
+        border-right-color: transparent;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes leftSlide {
+    from {
+        left: -300px;
+    }
+    to {
+        left: 0px;
+    }
+}
+
+@keyframes rightSlide {
+    from {
+        right: -300px;
+    }
+    to {
+        right: 0px;
+    }
+}
+
+@keyframes titleAnimation {
+    from{
+       opacity: 0; 
+       top: -200px;
+    }
+    to {
+        opacity: 1; 
+        top: 0px;
+    }
+}
+
+@media only screen and (max-width: 700px) {
+    .text {
+        font-size: 220%;
+    }
+
+    @keyframes typewriter {
+        from {
+            width: 0;
+        }
+        to {
+            width: 500px;
+        }
+    }
+}
+
+@media only screen and (max-width: 511px) {
+    .text {
+        font-size: 180%;
+    }
+
+    .btn {
+        padding: 10px 25px;
+        font-size: 18px;
+    }
+
+    input {
+        padding: 5px;
+        font-size: 18px;
+    }
+
+    @keyframes typewriter {
+        from {
+            width: 0;
+        }
+        to {
+            width: 410px;
+        }
+    }
+}
+
+@media only screen and (max-width: 420px) {
+    .text {
+        font-size: 150%;
+    }
+
+    @keyframes typewriter {
+        from {
+            width: 0;
+        }
+        to {
+            width: 340px;
+        }
+    }
+}
+
+
+::-webkit-scrollbar-track {
+    background: red !important;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: red !important; 
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #555; 
+}
