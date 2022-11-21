@@ -15,6 +15,7 @@
     animation: fadeIn 3s forwards;
 }
 
+
 .main-container {
     display: flex;
     flex-direction: column;
@@ -135,6 +136,28 @@ input {
     opacity: 0;
     animation: fadeIn 3s forwards;
     // animation-delay: .8s;
+}
+
+.unsub {
+    background-color: rgb(146, 40, 40);
+    margin-top: 30px;
+    padding: 10px 28px;
+    opacity: 0;
+    animation: fadeIn 2s forwards;
+    animation-delay: .5s;
+    font-size: 18px;
+    border: none;
+    outline: none;
+    border-radius: 10px;
+    transition: .3s;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+}
+
+.unsub:hover {
+    cursor: pointer;
+    transform: scale(1.1);
 }
 
 #profiles {

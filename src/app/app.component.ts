@@ -61,4 +61,8 @@ export class AppComponent implements OnInit{
       this.profiles.sort((a: Profile, b: Profile) => new Date(b.timestamp).getTime() - new Date(a.timestamp).getTime());
     });
   }
+
+  unSubscribe(): void {
+    this.swPush.unsubscribe().then(res => console.log(res)).catch(err => console.log(err));
+  }
 }
