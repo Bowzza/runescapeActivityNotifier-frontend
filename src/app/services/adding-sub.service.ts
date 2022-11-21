@@ -4,7 +4,7 @@ import { Observable } from 'rxjs';
 import { Profile } from '../model/Profile';
 
 // const URL = 'http://localhost:3000/';
-const URL = 'https://runescapenotifier-backend.herokuapp.com/';
+const URL = 'https://runescapetracker-backend.herokuapp.com/';
 
 @Injectable({
   providedIn: 'root'
