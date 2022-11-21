@@ -1,6 +1,6 @@
 # RunescapeTrackerFrontend
 
-Online Website: https://runescapenotifier.herokuapp.com/
+Online Website: https://runescapetracker.herokuapp.com/
 
 ## Cloning and installation
 1. `git clone https://github.com/Bowzza/runescapeActivityNotifier-frontend.git`
