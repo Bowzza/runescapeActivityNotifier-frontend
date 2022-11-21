@@ -63,6 +63,6 @@ export class AppComponent implements OnInit{
   }
 
   unSubscribe(): void {
-    this.swPush.unsubscribe().then(res => console.log(res)).catch(err => console.log(err));
+    this.swPush.unsubscribe().then(res => alert('Unsubscribing successful.')).catch(err => alert('Unsubscribing was not possible.'));
   }
 }
